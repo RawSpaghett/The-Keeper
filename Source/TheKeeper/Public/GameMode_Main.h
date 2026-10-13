@@ -14,4 +14,7 @@ class THEKEEPER_API AGameMode_Main : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+
+	AGameMode_Main();
 };
