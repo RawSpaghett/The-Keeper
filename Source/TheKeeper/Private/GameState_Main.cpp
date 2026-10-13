@@ -3,7 +3,3 @@
 
 #include "GameState_Main.h"
 
-AGameState_Main::AGameState_Main()
-{
-	
-}

@@ -13,7 +13,5 @@ UCLASS()
 class THEKEEPER_API AGameState_Main : public AGameStateBase
 {
 	GENERATED_BODY()
-public:
-
-	AGameState_Main();
+	
 };
