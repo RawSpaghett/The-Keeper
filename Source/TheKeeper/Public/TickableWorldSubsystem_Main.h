@@ -21,20 +21,23 @@ public:
 	virtual bool IsTickableInEditor() const override { return false; }
 
 	//Variables
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "World Clock")
-	float TimeSpeed = 1.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Clock")
+	float SecondsPerHour;
 
 	UPROPERTY(BlueprintReadOnly, Category = "World Clock")
-	float CurrentTime = 0.0f;  //midnight
+	float TimeSpeed;
+
+	UPROPERTY(BlueprintReadOnly, Category = "World Clock")
+	float CurrentTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Clock")
-	float InitializeTime = 6.0f; 
+	float InitializeTime;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Clock")
-	float DayStart = 6.0f;
+	float DayStart;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "World Clock")
-	float NightStart = 18.0f;
+	float NightStart;
 
 	UPROPERTY(BlueprintReadOnly, Category = "World Clock")
 	bool bIsPaused = false;

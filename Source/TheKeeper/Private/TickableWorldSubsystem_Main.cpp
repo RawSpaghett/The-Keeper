@@ -11,14 +11,16 @@ void UTickableWorldSubsystem_Main::Initialize(FSubsystemCollectionBase& Collecti
 	
 	if(const UWorldClockSettings* Settings = GetDefault<UWorldClockSettings>())
 	{
-		TimeSpeed = Settings->DefaultTimeSpeed;
+		SecondsPerHour = FMath::Max(1.0f, Settings->DefaultSecondsPerHour);
 		InitializeTime = Settings->DefaultInitializeTime;
 		DayStart = Settings->DefaultDayStart;
 		NightStart = Settings->DefaultNightStart;
 	}
 
+	TimeSpeed = 24.0f / SecondsPerHour; // 24 hours in a day divided by seconds per hour gives the speed multiplier	
 	CurrentTime = InitializeTime;
 	bIsDay = CurrentTime >= DayStart && CurrentTime < NightStart;
+
 }
 
 void UTickableWorldSubsystem_Main::Tick(float DeltaTime)
