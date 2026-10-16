@@ -15,11 +15,11 @@ public:
 	UWorldClockSettings()
 	{
 		CategoryName = TEXT("Game");
-		SectionName = TEXT("World Clock | Settings");
+		SectionName = TEXT("World Clock Settings");
 	}
 	// UDeveloperSettings
 	UPROPERTY(Config,EditAnywhere, BlueprintReadOnly, Category = "Time Control", meta = (ClampMin = "0.0"))
-	float DefaultTimeSpeed = 1.0f;
+	float DefaultSecondsPerHour = 60.0f;
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Time Control", meta = (ClampMin = "0.0", ClampMax = "24.0"))
 	float DefaultInitializeTime = 6.0f;

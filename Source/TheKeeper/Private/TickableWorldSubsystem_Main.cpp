@@ -11,14 +11,24 @@ void UTickableWorldSubsystem_Main::Initialize(FSubsystemCollectionBase& Collecti
 	
 	if(const UWorldClockSettings* Settings = GetDefault<UWorldClockSettings>())
 	{
-		TimeSpeed = Settings->DefaultTimeSpeed;
+		SecondsPerHour = FMath::Max(1.0f, Settings->DefaultSecondsPerHour);
 		InitializeTime = Settings->DefaultInitializeTime;
 		DayStart = Settings->DefaultDayStart;
 		NightStart = Settings->DefaultNightStart;
 	}
 
+	TimeSpeed = 1.0f / SecondsPerHour; 
 	CurrentTime = InitializeTime;
 	bIsDay = CurrentTime >= DayStart && CurrentTime < NightStart;
+
+	#if WITH_EDITOR //print to screen in the editor
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Every Second IRL is %.3f Hours %.3f minutes and %.3f Seconds Ingame"), TimeSpeed, (TimeSpeed * 60.0f), (TimeSpeed * 3600.0f)));
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("One full day is %.1f minutes"), (24 * SecondsPerHour)/60.0f));
+	}
+	#endif
+
 }
 
 void UTickableWorldSubsystem_Main::Tick(float DeltaTime)
@@ -48,14 +58,14 @@ void UTickableWorldSubsystem_Main::Tick(float DeltaTime)
 	}
 }
 
-	TStatId UTickableWorldSubsystem_Main::GetStatId() const //defines this stat group for the profiler, mandatory
-	{
-		RETURN_QUICK_DECLARE_CYCLE_STAT(UWorldClockSubsystem, STATGROUP_Tickables);
-	}
+TStatId UTickableWorldSubsystem_Main::GetStatId() const //defines this stat group for the profiler, mandatory
+{
+	RETURN_QUICK_DECLARE_CYCLE_STAT(UTickableWorldSubsystem_Main, STATGROUP_Tickables);
+}
 
-	void UTickableWorldSubsystem_Main::SetWorldTime(float NewTime, float NewTimeSpeed)
-	{
-		CurrentTime = FMath::Clamp(NewTime, 0.0f, 24.0f);
-		TimeSpeed = NewTimeSpeed;
-		bIsDay = CurrentTime >= DayStart && CurrentTime < NightStart;
-	}
+void UTickableWorldSubsystem_Main::SetWorldTime(float NewTime, float NewTimeSpeed)
+{
+	CurrentTime = FMath::Clamp(NewTime, 0.0f, 24.0f);
+	TimeSpeed = NewTimeSpeed;
+	bIsDay = CurrentTime >= DayStart && CurrentTime < NightStart;
+}
