@@ -10,3 +10,4 @@ UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sanity_Immune_Other, "Sanity.Immune.Other", "Immu
 UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sanity_Resistance_LightWeak, "Sanity.Resistance.LightWeak", "Resistant to sanity loss. Weak light");
 UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sanity_Resistance_IndoorsDark, "Sanity.Resistance.IndoorsDark", "Resistant to sanity loss. Indoors with darkness");
 UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sanity_Resistance_Other, "Sanity.Resistance.Other", "Resistant to sanity loss. Other conditions");
+UE_DEFINE_GAMEPLAY_TAG_COMMENT(Sanity_Channel,"Sanity.Channel", "GameplayMessageSubsystem")
