@@ -1,0 +1,5 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Example folder using LFS
+Content/TheKeeper/StageLevels/** filter=lfs diff=lfs merge=lfs -text
