@@ -8,7 +8,7 @@ public class TheKeeper : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "DeveloperSettings", "GameplayTags" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "DeveloperSettings", "GameplayTags","GameplayMessageRuntime" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
