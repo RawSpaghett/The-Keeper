@@ -77,12 +77,10 @@ public:
 	FGameplayTag BroadcastChannel;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Event Data")
 	FGameplayTagQuery TagQuery;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Event Data")
+	bool bPlayerTagContainer;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Event Data")
 	FEventConditions ConditionData;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Event Data") 
-	FIST_Magnitude OutgoingData;
 
 	//Changeable by day
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "3-Days")
