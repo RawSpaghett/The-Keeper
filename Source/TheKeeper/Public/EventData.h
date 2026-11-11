@@ -5,6 +5,7 @@
 #include "Engine/DataTable.h"
 #include "GameplayTagContainer.h"
 #include "NativeGameplayTags.h"
+#include "IST_Magnitude.h"
 #include "StructUtils/InstancedStruct.h"
 #include "EventData.generated.h"
 
@@ -23,9 +24,6 @@ USTRUCT(BlueprintType)
 struct FEventConditions
 {
 	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FGameplayTag VariableTag;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EConditionComparison Comparison = EConditionComparison::None;
@@ -84,7 +82,7 @@ public:
 	FEventConditions ConditionData;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Event Data") 
-	FInstancedStruct OutgoingData;
+	FIST_Magnitude OutgoingData;
 
 	//Changeable by day
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "3-Days")
