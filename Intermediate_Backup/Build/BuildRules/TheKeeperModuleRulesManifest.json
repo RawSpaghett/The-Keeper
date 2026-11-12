@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\jadon\\Downloads\\Github\\The-Keeper\\Source\\TheKeeper\\TheKeeper.Build.cs",
+		"C:\\Users\\jadon\\Downloads\\Github\\The-Keeper\\Plugins\\GameplayMessageRouter\\Source\\GameplayMessageNodes\\GameplayMessageNodes.Build.cs",
+		"C:\\Users\\jadon\\Downloads\\Github\\The-Keeper\\Plugins\\GameplayMessageRouter\\Source\\GameplayMessageRuntime\\GameplayMessageRuntime.Build.cs",
+		"C:\\Users\\jadon\\Downloads\\Github\\The-Keeper\\Source\\TheKeeper.Target.cs",
+		"C:\\Users\\jadon\\Downloads\\Github\\The-Keeper\\Source\\TheKeeperEditor.Target.cs"
+	],
+	"EngineVersion": "5.7.4"
+}

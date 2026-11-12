@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jadon\\downloads\\github\\the-keeper\\source\\thekeeper\\private\\tickableworldsubsystem_main.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\x64\\thekeepereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\thekeeper\\definitions.thekeeper.h",
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\source\\thekeeper\\public\\tickableworldsubsystem_main.h",
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\unrealeditor\\inc\\thekeeper\\uht\\tickableworldsubsystem_main.generated.h",
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\source\\thekeeper\\public\\worldclocksettings.h",
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\unrealeditor\\inc\\thekeeper\\uht\\worldclocksettings.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
