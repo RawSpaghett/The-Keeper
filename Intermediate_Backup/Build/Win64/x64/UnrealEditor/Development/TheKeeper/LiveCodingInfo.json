@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TheKeeper.gen.cpp.obj": [
+			"EventData.gen.cpp.obj",
+			"GameMode_Main.gen.cpp.obj",
+			"TheKeeper.init.gen.cpp.obj",
+			"TickableWorldSubsystem_Main.gen.cpp.obj",
+			"WorldClockSettings.gen.cpp.obj"
+		]
+	}
+}
