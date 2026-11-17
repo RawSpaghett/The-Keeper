@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jadon\\downloads\\github\\the-keeper\\source\\thekeeper\\thekeeper.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\x64\\thekeepereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\thekeeper\\definitions.thekeeper.h",
+            "c:\\users\\jadon\\downloads\\github\\the-keeper\\source\\thekeeper\\thekeeper.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
