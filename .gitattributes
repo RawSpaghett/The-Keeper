@@ -3,3 +3,7 @@
 
 # Example folder using LFS
 Content/TheKeeper/StageLevels/** filter=lfs diff=lfs merge=lfs -text
+
+# Unreal Engine binary assets
+*.uasset binary merge=binary
+*.umap binary merge=binary
